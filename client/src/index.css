@@ -9,6 +9,14 @@ body {
 .site-container {
   min-height: 100vh;
 }
+
+.card-img-top {
+  width: 100% !important;
+  max-width: 400px !important;
+  height: 100% !important;
+  max-height: 350px !important;
+}
+
 main {
   flex: 1;
 }
