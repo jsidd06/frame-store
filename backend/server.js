@@ -3,6 +3,7 @@ import express from "express";
 import mongoose, { mongo } from "mongoose";
 import seedRouter from "./Routes/seedRoutes.js";
 import productRouter from "./Routes/productRoutes.js";
+import userRouter from "./Routes/userRoutes.js";
 
 dotenv.config();
 
@@ -17,9 +18,17 @@ mongoose
   });
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // ALL PRODUCTS API
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);
+app.use("/api/users", userRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
