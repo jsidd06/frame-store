@@ -1,5 +1,18 @@
+import dotenv from "dotenv";
 import express from "express";
 import data from "./data.js";
+import mongoose from "mongoose";
+
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("connected to local server db");
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 
 const app = express();
 // ALL PRODUCTS API
