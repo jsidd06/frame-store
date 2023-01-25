@@ -115,7 +115,10 @@
     1. create backend api for order/:id
     2. fetch order api in frontend
     3. show order information in 2 cloumns
+<<<<<<< HEAD
 30. Display Order History
     1. create order screen
     2. create order history api
     3. use api in the frontend
+=======
+>>>>>>> 580511c4a45bbc4d4bd5ec6e32ef8bae35f252ff
