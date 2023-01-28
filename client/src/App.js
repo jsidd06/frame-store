@@ -17,6 +17,7 @@ import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SignupScreen from "./screens/SignupScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import DashboardScreen from "./screens/DashboardScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderScreen from "./screens/OrderScreen";
 import ProfileScreen from "./screens/ProfileScreen";
@@ -25,6 +26,8 @@ import { getError } from "./utils";
 import axios from "axios";
 import SearchBox from "./components/SearchBox";
 import SearchScreen from "./screens/SearchScreen";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -107,6 +110,22 @@ function App() {
                       Sign In
                     </Link>
                   )}
+                  {userInfo && userInfo.isAdmin && (
+                    <NavDropdown title="Admin" id="admin-nav-dropdown">
+                      <LinkContainer to="/admin/dashboard">
+                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/productlist">
+                        <NavDropdown.Item>Products</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/orderlist">
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                      </LinkContainer>
+                      <LinkContainer to="/admin/userlist">
+                        <NavDropdown.Item>Users</NavDropdown.Item>
+                      </LinkContainer>
+                    </NavDropdown>
+                  )}
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -143,10 +162,21 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />}></Route>
-              <Route path="/order/:id" element={<OrderScreen />}></Route>
+              <Route
+                path="/order/:id"
+                element={
+                  <ProtectedRoute>
+                    <OrderScreen />
+                  </ProtectedRoute>
+                }
+              ></Route>
               <Route
                 path="/orderhistory"
-                element={<OrderHistoryScreen />}
+                element={
+                  <ProtectedRoute>
+                    <OrderHistoryScreen />
+                  </ProtectedRoute>
+                }
               ></Route>
               <Route
                 path="/shipping"
@@ -155,8 +185,24 @@ function App() {
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/search" element={<SearchScreen />} />
-              <Route path="/profile" element={<ProfileScreen />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <ProfileScreen />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/order/:id" element={<OrderScreen />} />
+              {/* Admin Routes */}
+              <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminProtectedRoute>
+                    <DashboardScreen />
+                  </AdminProtectedRoute>
+                }
+              ></Route>
             </Routes>
           </Container>
         </main>
