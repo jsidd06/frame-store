@@ -10,7 +10,7 @@ Welcome to my React and Node tutorial to build a fully-functional e-commerce web
 
 - 👉 Heroku : [https://mern-amazona-app.herokuapp.com](https://react-amazona.herokuapp.com) -->
 
-## You Will Learn
+## You Will Get This Languages
 
 - HTML5 and CSS3: Semantic Elements, CSS Grid, Flexbox
 - React: Components, Props, Events, Hooks, Router, Axios
@@ -74,7 +74,7 @@ $ npm start
 
 - Contact Instructor: [Siddharth Jain](mailto:jsidd06@gmail.com)
 
-# Lessons
+# Step by Step Work
 
 1. Introduction
 2. Install Tool
