@@ -23,6 +23,8 @@ Welcome to my React and Node tutorial to build a fully-functional e-commerce web
 
 ## Run Locally
 
+- duplicate .env.example in backend folder and rename it to .env
+
 ### 1. Clone repo
 
 ```
@@ -35,7 +37,7 @@ $ cd frame-store
 - Local MongoDB
   - Install it from [here](https://www.mongodb.com/try/download/community)
   - Create .env file in root folder
-  - Set MONGODB_URI=mongodb://localhost/amazona
+  - Set MONGODB_URI=mongodb://localhost/frame-store
 - Atlas Cloud MongoDB
   - Create database at [https://cloud.mongodb.com](https://cloud.mongodb.com)
   - Create .env file in root folder
@@ -44,6 +46,7 @@ $ cd frame-store
 ### 3. Run Backend
 
 ```
+$ cd backend
 $ npm install
 $ npm start
 ```
@@ -59,7 +62,7 @@ $ npm start
 
 ### 5. Seed Users and Products
 
-- Run this on chrome: http://localhost:5000/api/seed
+- Run this on browser: http://localhost:5000/api/seed
 - It returns admin email and password and 6 sample products
 
 ### 6. Admin Login
