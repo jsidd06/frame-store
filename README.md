@@ -1,6 +1,6 @@
 # MERN FRAME-STORE
 
-![frame-store](/client/images/s1.png)
+![frame-store](/client/public/images/s1.png)
 
 # React Tutorial - Build ECommerce in 6 Hours [2022]
 
