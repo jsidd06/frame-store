@@ -1,6 +1,6 @@
 # MERN FRAME-STORE
 
-![frame-store](/client/public/images/gitImage.jpg)
+![frame-store](https://www.instagram.com/p/CoEdY8LvxGr/?igshid=NDk5N2NlZjQ%3D)
 
 # React Project - Build ECommerce in [2023]
 
@@ -55,7 +55,7 @@ $ npm start
 
 ```
 # open new terminal
-$ cd frontend
+$ cd client
 $ npm install
 $ npm start
 ```
