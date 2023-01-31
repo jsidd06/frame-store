@@ -1,6 +1,6 @@
 # MERN FRAME-STORE
 
-![frame-store](https://www.instagram.com/p/CoEdY8LvxGr/?igshid=NDk5N2NlZjQ%3D)
+![frame-store](/client/public/images/frame-store.jpg)
 
 # React Project - Build ECommerce in [2023]
 
