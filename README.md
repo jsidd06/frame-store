@@ -185,3 +185,7 @@
     1. add delete button
     2. handle click action
     3. implement backend api for delete
+47. Review Orders
+    1. create submit review form
+    2. handle submit
+    3. implement backend api for review
