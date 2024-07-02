@@ -1,6 +1,6 @@
 # MERN FRAME-STORE
 
-[![Project Overview](./client//public/images/s.png)]
+![Project Overview](./client//public/images/s.png)
 
 <!-- ![frame-store](/client/public/images/frame-store.jpg) -->
 
