@@ -1,5 +1,7 @@
 # MERN FRAME-STORE
 
+[![Project Overview](./client//public/images/s.png)]
+
 <!-- ![frame-store](/client/public/images/frame-store.jpg) -->
 
 # React Project - Build ECommerce in [2023]
